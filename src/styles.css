@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+
+  --color-bg: #07080c;
+  --color-surface: #12151a;
+  --color-surface-2: #1a1e26;
+  --color-fg: #ececec;
+  --color-muted: #8b919c;
+  --color-subtle: #6a717c;
+  --color-accent: #b4c0cc;
+  --color-accent-fg: #07080c;
+  --color-border: rgb(236 236 236 / 0.1);
+  --color-ring: #b4c0cc;
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --shadow-panel: 0 0 0 1px rgb(255 255 255 / 0.08);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html,
+  body {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.globe-loader {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid rgb(236 236 236 / 0.16);
+  border-top-color: var(--color-accent);
+  border-radius: 999px;
+  animation: globe-spin 0.9s linear infinite;
+}
+
+@keyframes globe-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .globe-loader {
+    animation: none;
+    border-top-color: var(--color-accent);
+    opacity: 0.7;
+  }
+}
+
+.overlay-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(236 236 236 / 0.16) transparent;
+}
+
+.overlay-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.overlay-scroll::-webkit-scrollbar-thumb {
+  background: rgb(236 236 236 / 0.16);
+  border-radius: 999px;
+}
+
+.vignette {
+  background: radial-gradient(
+    ellipse at 54% 48%,
+    transparent 28%,
+    color-mix(in oklab, var(--color-bg) 55%, transparent) 72%,
+    var(--color-bg) 100%
+  );
+}
+
+@media (max-width: 767px) {
+  .vignette {
+    background: radial-gradient(
+      ellipse at 50% 38%,
+      transparent 32%,
+      color-mix(in oklab, var(--color-bg) 50%, transparent) 78%,
+      var(--color-bg) 100%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay-motion,
+  .overlay-motion * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.stagger-in {
+  animation: rise-in 400ms var(--ease-out-soft) both;
+}

@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Meridian",
+      "hasCanvas": false,
+      "bodyTextLen": 436,
+      "bodyTextHash": "3ef0c0a3abf4479c424b3c7ec11cf102bb8085620b0e93c5aa229960981d583c",
+      "bodyTextPrefix": "Meridian — a rotating 3D globe of featured places Meridian A glo",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Meridian",
+      "hasCanvas": false,
+      "bodyTextLen": 308,
+      "bodyTextHash": "2bb2d385a4c33f8b12b6222ebcce7a5ed01be2192ac2a70bfb6fb8c075dc820d",
+      "bodyTextPrefix": "Meridian — a rotating 3D globe of featured places Meridian A glo",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

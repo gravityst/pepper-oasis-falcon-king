@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Meridian",
+      "hasCanvas": false,
+      "bodyTextLen": 455,
+      "bodyTextHash": "df1e0b1ebec8cd26caceb0b9caa20713208a8b7982e082ea32992625dfc498b0",
+      "bodyTextPrefix": "Meridian — a rotating 3D globe of featured places Lighting the g",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Meridian",
+      "hasCanvas": false,
+      "bodyTextLen": 327,
+      "bodyTextHash": "b8d200760ad15b85d98e2b902864e488e4dc8f728fbe85787d81812d14dca93c",
+      "bodyTextPrefix": "Meridian — a rotating 3D globe of featured places Lighting the g",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
